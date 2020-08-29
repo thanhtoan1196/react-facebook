@@ -30,6 +30,7 @@ class Share2 extends _react.PureComponent {
   render() {
     const {
       href = (0, _getCurrentHref.default)(),
+      classValue,
       layout,
       colorScheme,
       action,
@@ -42,7 +43,7 @@ class Share2 extends _react.PureComponent {
       referral
     } = this.props;
     return /*#__PURE__*/_react.default.createElement("div", {
-      className: "fb-share-button",
+      className: `fb-share-button ${classValue}`,
       "data-ref": referral,
       "data-href": href,
       "data-layout": layout,
@@ -68,6 +69,7 @@ class Share2 extends _react.PureComponent {
   kidDirectedSite: undefined,
   children: undefined,
   href: undefined,
+  classValue: '',
   referral: undefined,
   width: undefined
 });

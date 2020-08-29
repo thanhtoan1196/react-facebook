@@ -6,6 +6,7 @@ import getCurrentHref from './utils/getCurrentHref';
 type Props = {
   referral?: string,
   href?: string,
+  classValue?: string,
   layout?: string,
   showFaces?: boolean,
   colorScheme?: string,
@@ -29,6 +30,7 @@ class Like extends PureComponent<Props> {
     kidDirectedSite: undefined,
     children: undefined,
     href: undefined,
+    classValue: '',
     referral: undefined,
     width: undefined,
   };
@@ -41,6 +43,7 @@ class Like extends PureComponent<Props> {
   render() {
     const {
       href = getCurrentHref(),
+      classValue,
       layout,
       colorScheme,
       action,
@@ -55,7 +58,7 @@ class Like extends PureComponent<Props> {
 
     return (
       <div
-        className="fb-like"
+        className={`fb-like ${classValue}`}
         data-ref={referral}
         data-href={href}
         data-layout={layout}
