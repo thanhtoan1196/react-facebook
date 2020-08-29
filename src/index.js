@@ -7,6 +7,7 @@ export Initialize from './Initialize';
 export Like from './Like';
 export Send from './Send';
 export Share from './Share';
+export Share2 from './Share2';
 export ShareButton from './ShareButton';
 export Page from './Page';
 export Login from './Login';
