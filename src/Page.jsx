@@ -13,6 +13,7 @@ type Props = {
   hideCTA?: boolean,
   smallHeader?: boolean,
   adaptContainerWidth?: boolean,
+  lazy?: boolean,
   children?: Node,
   style?: Object,
   handleParse: Function,
@@ -28,6 +29,7 @@ class Page extends PureComponent<Props> {
     hideCTA: undefined,
     smallHeader: undefined,
     adaptContainerWidth: undefined,
+    lazy: undefined,
     children: undefined,
     style: undefined,
     href: undefined,
@@ -50,6 +52,7 @@ class Page extends PureComponent<Props> {
       hideCTA,
       smallHeader,
       adaptContainerWidth,
+      lazy,
       children,
     } = this.props;
 
@@ -64,6 +67,7 @@ class Page extends PureComponent<Props> {
         data-href={href}
         data-small-header={smallHeader}
         data-adapt-container-width={adaptContainerWidth}
+        data-lazy={lazy}
         data-height={height}
         data-width={width}
       >
