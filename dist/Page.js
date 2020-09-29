@@ -39,6 +39,7 @@ class Page extends _react.PureComponent {
       hideCTA,
       smallHeader,
       adaptContainerWidth,
+      lazy,
       children
     } = this.props;
     return /*#__PURE__*/_react.default.createElement("div", {
@@ -51,6 +52,7 @@ class Page extends _react.PureComponent {
       "data-href": href,
       "data-small-header": smallHeader,
       "data-adapt-container-width": adaptContainerWidth,
+      "data-lazy": lazy,
       "data-height": height,
       "data-width": width
     }, children);
@@ -67,6 +69,7 @@ class Page extends _react.PureComponent {
   hideCTA: undefined,
   smallHeader: undefined,
   adaptContainerWidth: undefined,
+  lazy: undefined,
   children: undefined,
   style: undefined,
   href: undefined

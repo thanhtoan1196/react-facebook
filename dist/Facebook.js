@@ -71,6 +71,10 @@ class Facebook {
         } = _this$options,
               restOptions = (0, _objectWithoutProperties2.default)(_this$options, ["domain", "language", "debug", "chatSupport"]);
 
+        if (window.document.getElementById('facebook-jssdk')) {
+          return resolve(window.FB);
+        }
+
         window.fbAsyncInit = () => {
           window.FB.init({
             appId: restOptions.appId,
@@ -82,10 +86,6 @@ class Facebook {
           });
           resolve(window.FB);
         };
-
-        if (window.document.getElementById('facebook-jssdk')) {
-          return resolve(window.FB);
-        }
 
         const js = window.document.createElement('script');
         js.id = 'facebook-jssdk';
